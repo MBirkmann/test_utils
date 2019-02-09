@@ -31,6 +31,10 @@
 		<system>GitHub</system>
 		<url>https://github.com/MBirkmann/test_utils/issues</url>
 	</issueManagement>
+	<ciManagement>
+		<system>Travis</system>
+		<url>https://travis-ci.org/MBirkmann/test_utils/</url>
+	</ciManagement>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -167,6 +171,7 @@
 				<groupId>org.eluder.coveralls</groupId>
 				<artifactId>coveralls-maven-plugin</artifactId>
 				<version>${coveralls.maven.plugin.version}</version>
+
 			</plugin>
 		</plugins>
 	</build>
