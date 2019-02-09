@@ -51,6 +51,7 @@
 		<maven.site-plugin.version>3.7.1</maven.site-plugin.version>
 		<maven.project.info.reports.plugin.version>3.0.0</maven.project.info.reports.plugin.version>
 		<maven.bundle.plugin.version>4.1.0</maven.bundle.plugin.version>
+		<coveralls.maven.plugin.version>4.3.0</coveralls.maven.plugin.version>
 	</properties>
 
 	<dependencies>
@@ -147,6 +148,11 @@
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 					</instructions>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eluder.coveralls</groupId>
+				<artifactId>coveralls-maven-plugin</artifactId>
+				<version>${coveralls.maven.plugin.version}</version>
 			</plugin>
 		</plugins>
 	</build>
