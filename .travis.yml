@@ -9,14 +9,11 @@ addons:
   sonarcloud:
     organization: "mbirkmann-github"
     token:
-      secure: SONAR_TOKEN
+      SONAR_TOKEN
       
 script:
-- mvn clean install
+- mvn clean install coveralls:report sonar:sonar
 
 cache:
   directories:
   - $HOME/.m2
-
-after_success:
-  - mvn clean test jacoco:report coveralls:report
