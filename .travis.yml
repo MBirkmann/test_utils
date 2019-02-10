@@ -5,15 +5,18 @@ jdk:
 sudo: false
 dist: trusty
 
+cache:
+  directories:
+  - $HOME/.m2
+  
 addons:
   sonarcloud:
     organization: "mbirkmann-github"
     token:
-      SONAR_TOKEN
+      secure: SONAR_TOKEN
       
 script:
-- mvn clean install coveralls:report sonar:sonar
+  - mvn clean install
 
-cache:
-  directories:
-  - $HOME/.m2
+after_success:
+  - mvn clean test jacoco:report coveralls:report sonar:sonar
